@@ -6,7 +6,7 @@ sources:
   schema: RAW
   tables:
   - name: COUNTRY
-    description: 'Country reference data'
+    description: 'Country reference data2'
     columns:
     - name: COUNTRY_ID
       description: 'Primary key for countries'
