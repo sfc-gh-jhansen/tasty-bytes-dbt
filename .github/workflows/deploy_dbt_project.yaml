@@ -53,7 +53,7 @@ jobs:
         run: snow dbt list -x
 
       - name: Execute run on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt execute -x DEMO_DBT_PROJECT run --target prod
+        run: snow dbt execute -x DEMO_DBT_PROJECT run --target prod --select sales_data_by_truck
 
       - name: Execute data quality test on dbt project object in ${{ vars.SNOWFLAKE_ACCOUNT }} on ${{ vars.SNOWFLAKE_DATABASE }}.${{ vars.SNOWFLAKE_SCHEMA }}
-        run: snow dbt execute -x DEMO_DBT_PROJECT test --target prod
+        run: snow dbt execute -x DEMO_DBT_PROJECT test --target prod --select sales_data_by_truck
